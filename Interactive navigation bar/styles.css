@@ -1,0 +1,263 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+nav .logo img {
+    width: 110px;
+}
+
+nav .nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+nav .nav-menu li {
+    position: relative;  
+    margin: 0 35px;
+    font-size: 1.15em;
+    padding: 0;  
+}
+
+nav .nav-menu li a {
+    text-decoration: none;  
+    color: rgb(255, 255, 255); 
+}
+
+nav .nav-menu li .more {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color:#18171a; 
+    color:white;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); 
+    z-index: 10;  
+    padding: 0;  
+    border-radius: 0px 5px;
+}
+
+nav .nav-menu li .more li {
+    margin: 0;  
+    padding: 5px 15px;  
+    white-space: nowrap;
+    text-align: left;  
+}
+
+.bx-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.nav-menu li {
+    transition: background-color 0.3s ease;
+}
+
+.more li:hover {
+    background-color: #626262;
+}
+
+nav .nav-menu li:hover .more {
+    display: block;
+}
+
+nav .nav-menu li.highlight,
+nav .nav-menu .more li.highlight {
+    background-color:  #626262;
+}
+
+nav .nav-menu li,
+nav .nav-menu .more li {
+    transition: background-color 0.3s ease; 
+}
+
+.heading {
+    background: url("./images/mario-gogh-VBLHICVh-lI-unsplash.jpg");
+    width: 100%;
+    height: 100vh;
+    margin:0;
+    padding:0;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+} 
+
+.heading .welcome{
+    font-size: 4em;
+    color:white;
+}
+
+.heading1 {
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+.content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.left {
+    flex: 1; 
+    padding-right: 30px; 
+}
+
+.right{
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info img{
+    max-width: calc(50%);
+}
+
+.info p, .left{
+    margin:0 2%;
+}
+
+.right img{
+    margin-right: 20px;
+    width: 100%;
+    height: auto; 
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 2rem;
+    color: white;
+}
+
+footer {
+    background-color: #18171a; 
+    color: #fff; 
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 120px; 
+    height: auto;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #f39c12; 
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social .social-icon {
+    font-size: 1.8em;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: #f39c12; 
+}
+
+.footer-bottom {
+    background-color: #1a191a; 
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    nav .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #18171a;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1001;
+    }
+
+    nav .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block; 
+    }
+
+    nav .nav-menu li {
+        margin: 10px 0;
+    }
+
+    nav .nav-menu li a {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer-logo a{
+        display: none;
+    }
+}
